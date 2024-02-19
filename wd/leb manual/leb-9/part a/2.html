@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .main{
+            height: 10%;
+            width: 10%;
+            background-color: aqua;
+            animation-duration: 5s;
+            /* animation-delay: 2s; */
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            /* animation-direction: reverse; */
+            animation-name: my;
+            position: relative;
+        }
+        @keyframes my{
+            0%{
+                top: 0%;
+                left: 0%;
+            }
+            25%{
+                top: 0%;
+                left: 90%;
+            }
+            50%{
+                top: 90%;
+                left: 90%;
+            }
+            75%{
+                top: 90%;
+                left: 0%;
+            }
+            100%{
+                top: 0%;
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+</body>
+</html>
