@@ -113,6 +113,5 @@ class Student {
         }
         spi = ans / totalcr;
         System.out.println("your total spi is" + spi);
-        ;
     }
 }

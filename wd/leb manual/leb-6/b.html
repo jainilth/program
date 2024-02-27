@@ -51,69 +51,107 @@
             float: left;
             /* border: 2px solid black; */
         }
-        
-        .im{
+
+        .im {
             width: 100%;
             height: 100%;
-            
+
         }
-        .im img{
+
+        .im img {
             margin: 5px;
             height: 90%;
             width: 90%;
         }
-        .a{
+
+        .a {
             float: right;
             height: auto;
             margin-top: 5%;
             margin-right: 5%;
         }
-        .left{
+
+        .left {
             width: 30%;
             height: 100%;
             float: left;
             /* border: 2px solid black; */
         }
-        .right{
+        .sidebar{
+            width: 100%;
+            height: 100%;
+            float: left;
+        }
+        .right {
             width: 70%;
             height: 100%;
             float: right;
             /* border: 2px solid black; */
         }
-        .left{
+
+        .left {
             background-color: red;
         }
-        .side{
+
+        .side {
             text-align: center;
+            height: 10%;
             border-bottom: 2px solid rgb(237, 237, 153);
         }
-        .home{
-            border-bottom: 2px solid rgb(237, 237, 153);
-            text-align: center;
-        }
-        .place{
+        .place {
             border-top: 2px solid rgb(237, 237, 153);
             border-bottom: 2px solid rgb(237, 237, 153);
-            margin-top:47px; 
+            margin-bottom:11%;
+            height: 10%;
             text-align: center;
         }
         .pho{
-            /* border: 2px solid black; */
-            height: 25%;
-            margin-top: 5%;
+            width: 100%;
+            height: 40%;
+            /* padding: 5%; */
+            border: 1px solid;
         }
         .photo{
-            height: 100%;
-            width:150px;
+            height: 150px;
+            width: 150px;
+            padding: 5%;
+            /* margin: 1%; */
             float: left;
-            margin-left: 5%;
-            text-align: center;
+            border: 1px solid black;
         }
         .photo img{
-            margin-left: 10px;
-            max-width: 150px;
+            height: 150px;
+            width: 150px;
+        }
+        .photodo{
+            height: 150px;
+            width: 150px;
+            /* margin: 1%; */
             float: left;
-            max-height: 250px;
+            border: 1px solid black;
+        }
+        .photodo img{
+            height: 150px;
+            width: 150px;
+        }
+        @media (max-width:1000px) {
+            .main{
+                height: 120vh;
+            }
+            .body{
+                height: 90%;
+            }
+            .pho{
+                height: 40%;
+            }
+            .photo{
+                width: 30%;
+                margin: 5%;
+            }
+            .photodo{
+                width: 30%;
+                margin: 6%;
+            }
         }
     </style>
 </head>
@@ -127,20 +165,35 @@
                 </div>
             </div>
             <div class="about">
-                    <div class="a"><a href="./index.html" target="_blank">login</a></div>
-                    <div class="a"><a href="./index.html" target="_blank">contact</a></div>
-                    <div class="a"><a href="./index.html" target="_blank">about</a></div>
-                    <div class="a"><a href="./index.html" target="_blank">Home</a></div>
+                <div class="a"><a href="./index.html" target="_blank">login</a></div>
+                <div class="a"><a href="./index.html" target="_blank">contact</a></div>
+                <div class="a"><a href="./index.html" target="_blank">about</a></div>
+                <div class="a"><a href="./index.html" target="_blank">Home</a></div>
             </div>
         </div>
         <div class="body">
             <div class="left">
-                <div class="side"><h3>sidebar</h3></div>
-                <div class="home"><h3>home</h3></div>
-                <div class="place"><h3>placement</h3></div>
-                <div class="place"><h3>reciuitment</h3></div>
-                <div class="place"><h3>faculty</h3></div>
-                <div class="place"><h3>news</h3></div>
+                <div class="sidebar">
+
+                    <div class="side">
+                        <h3>sidebar</h3>
+                    </div>
+                    <div class="place">
+                        <h3>home</h3>
+                    </div>
+                    <div class="place">
+                        <h3>placement</h3>
+                    </div>
+                    <div class="place">
+                        <h3>reciuitment</h3>
+                    </div>
+                    <div class="place">
+                        <h3>faculty</h3>
+                    </div>
+                    <div class="place">
+                        <h3>news</h3>
+                    </div>
+                </div>
             </div>
             <div class="right">
                 <div class="pho">
@@ -148,11 +201,17 @@
                     <div class="photo"><img src="../../Screen 2.png" alt="">Firoz sheyasiya <br>BE,ME</div>
                 </div>
                 <div class="pho">
-                    <div class="photo"><img src="../../Screen 1.png" alt="">Harsh Kansagara <br>L&T PVT LTdD <br>4.5 Lac</div>
-                    <div class="photo"><img src="../../Screen 2.png" alt="">Shyam Kantesariya <br>Tata consultancy service 5.0 Lac</div>
-                    <div class="photo"><img src="../../Screen 3.png" alt="">Jeet Dhamecha <br>Reliance indestury Ltd <br>5.0 Lac</div>
-                    <div class="photo"><img src="../../Screen 1.png" alt="">Harsh Maniar <br>Reliance indestury Ltd <br>5.0 Lac</div>
-                    <div class="photo"><img src="../../Screen 2.png" alt="">anand Dabhi <br>BSNL <br>5.5 Lac</div>
+                    <div class="photodo"><img src="../../Screen 1.png" alt="">Harsh Kansagara <br>L&T PVT LTdD <br>4.5 Lac
+                    </div>
+                    <div class="photodo"><img src="../../Screen 2.png" alt="">Shyam Kantesariya <br>Tata consultancy
+                        service 5.0 Lac</div>
+                    <div class="photodo"><img src="../../Screen 3.png" alt="">Jeet Dhamecha <br>Reliance indestury Ltd
+                        <br>5.0 Lac
+                    </div>
+                    <div class="photodo"><img src="../../Screen 1.png" alt="">Harsh Maniar <br>Reliance indestury Ltd
+                        <br>5.0 Lac
+                    </div>
+                    <div class="photodo"><img src="../../Screen 2.png" alt="">anand Dabhi <br>BSNL <br>5.5 Lac</div>
                 </div>
             </div>
         </div>

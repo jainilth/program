@@ -14,11 +14,6 @@ class Member {
     int phonenum;
     String address;
     int salary;
-
-    Member() {
-
-    }
-
     void printSalary() {
         System.out.println(salary);
     }
