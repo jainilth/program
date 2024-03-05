@@ -3,9 +3,9 @@ public class BookDemo {
         System.out.println("aouther name"+args[0]);
         String name=args[0];
         Book b1;
-        System.out.println("aouther name"+args[1]);
+        System.out.println("publication type"+args[1]);
         String publication=args[1];
-        System.out.println("aouther name"+args[2]);
+        System.out.println("title"+args[2]);
         String title=args[2];
         if(publication=="bookpublicatiion"){
             b1=new BookPublication(name,title);
@@ -39,7 +39,7 @@ class BookPublication extends Book{
     }
     void displayDetail(){
         printName();
-        System.out.println("the book's title is"+title);
+        System.out.println("the book's title is:"+title);
     }
 }
 class PaperPublication extends Book{
