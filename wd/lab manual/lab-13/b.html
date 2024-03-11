@@ -22,6 +22,12 @@
             background-color: black;
         }
 
+        .body {
+            background-color: rgba(0, 0, 0, 0.633);
+            height: 90%;
+            width: 100%;
+        }
+
         .logo {
             width: 6%;
             height: 100%;
@@ -48,7 +54,7 @@
             height: 100%;
             float: left;
         }
-        
+
         .r {
             /* border: 1px solid yellow; */
             width: 20%;
@@ -56,6 +62,7 @@
             float: right;
             color: aliceblue;
         }
+
         .r1 {
             /* border: 1px solid yellow; */
             width: 15%;
@@ -63,23 +70,38 @@
             float: right;
             color: aliceblue;
         }
-        .lo{
+
+        .lo {
             height: 45%;
             border: 2px solid black;
             width: 20%;
             float: left;
             margin-top: 20px;
         }
-        .lo img{
+
+        .lo img {
             height: 100%;
             width: 100%;
         }
-        select{
-            border: 0px ;
+
+        select {
+            border: 0px;
         }
-        .body{
-            background-color: rgba(0, 0, 0, 0.633);
+
+        .all {
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0);
+            height: 30%;
+        }
+        .event{
+            width: 90%;
             height: 90%;
+            margin-top: 1%;
+            margin-left: 4%;
+            position: relative;
+        }
+        .event img{
+            height: 100%;
             width: 100%;
         }
     </style>
@@ -93,11 +115,21 @@
             <div class="sound">SoundAMP</div>
             <div class="sele">
                 <div class="r">
-                    <div class="lo"><img src="https://i.pinimg.com/originals/0c/23/33/0c23332059f19519c291c00496b5f056.jpg" alt=""></div>
-                    <div class="lo"><img src="https://tse2.mm.bing.net/th?id=OIP.vgIGdgFcikTpOamLdJ9X7AHaHa&pid=Api&P=0&h=180" alt=""></div>
-                    <div class="lo"><img src="https://tse3.mm.bing.net/th?id=OIP.kge-1rPQuem5foAF0XHLOwHaHa&pid=Api&P=0&h=180" alt=""></div>
-                    <div class="lo"><img src="https://tse2.mm.bing.net/th?id=OIP.FZpmeDirqwnNzkBv6U8W5wHaEK&pid=Api&P=0&h=180" alt=""></div>
-                    <div class="lo"><img src="https://tse4.mm.bing.net/th?id=OIP.zb0zSH8mxA1z6ubnNVkWcAHaGn&pid=Api&P=0&h=180g" alt=""></div>
+                    <div class="lo"><img
+                            src="https://i.pinimg.com/originals/0c/23/33/0c23332059f19519c291c00496b5f056.jpg" alt="">
+                    </div>
+                    <div class="lo"><img
+                            src="https://tse2.mm.bing.net/th?id=OIP.vgIGdgFcikTpOamLdJ9X7AHaHa&pid=Api&P=0&h=180"
+                            alt=""></div>
+                    <div class="lo"><img
+                            src="https://tse3.mm.bing.net/th?id=OIP.kge-1rPQuem5foAF0XHLOwHaHa&pid=Api&P=0&h=180"
+                            alt=""></div>
+                    <div class="lo"><img
+                            src="https://tse2.mm.bing.net/th?id=OIP.FZpmeDirqwnNzkBv6U8W5wHaEK&pid=Api&P=0&h=180"
+                            alt=""></div>
+                    <div class="lo"><img
+                            src="https://tse4.mm.bing.net/th?id=OIP.zb0zSH8mxA1z6ubnNVkWcAHaGn&pid=Api&P=0&h=180g"
+                            alt=""></div>
                 </div>
                 <div class="r1">
                     <div class="download"><input type="submit" value="Download now"
@@ -105,8 +137,7 @@
                     </div>
                 </div>
                 <div class="r">
-                    <select
-                        style="background-color: black; color: aliceblue;  margin-top: 20px;height: 30px;">
+                    <select style="background-color: black; color: aliceblue;  margin-top: 20px;height: 30px;">
                         <option value="p">more HTML tamplates</option>
                         <option value="p">a</option>
                         <option value="p">b</option>
@@ -122,7 +153,69 @@
                 </div>
             </div>
         </div>
-        <div class="body"></div>
+        <div class="body">
+            <div class="all">
+                <div class="event">
+                    <img src="https://i.pinimg.com/originals/8e/07/80/8e078013204d0cc9876e9edbb1fd3f85.jpg" alt="">
+                    <div class="sub" style="position: absolute;top: 40%;color: aliceblue;left: 80%;font-size: 50px;">All Event</div>
+                </div>
+            </div>
+            <div class="con">
+                <div style="width: 1000px;margin-left: 220px;margin-top: 10px;display: inline-block;height: 500px;">
+                    <div style="width: 244px;height: 440px;background-color: white;color: black;float: left;"><img src="https://tse4.mm.bing.net/th?id=OIP.KRl4QUHbkMV3w-rUoD39TgHaHa&pid=Api&P=0&h=180" style="width:244px;height:200px">
+                    <div>	<h5>10/05/2018
+                        <br>
+                        <b style="font-size: 20px;">Night Laser Show</b>
+                        <br>#hip-hop #mb #dance
+                        <br>
+                        We are happy to announce this laser show.</h5></div>
+                        <div style="display: flex;justify-content: center;align-items: center;">
+                        <button style="background-color:skyblue;color: white;border-radius: 20px;border: none;height: 40px;">See more...</button>
+                    </div>
+                    </div>
+                    <div style="width: 244px;margin-left: 8px;height: 440px;color: black;float: left;background-color: white;"><img src="https://tse2.mm.bing.net/th?id=OIP.ULStGhNRmjyYmGC4FwzdXgHaEf&pid=Api&P=0&h=180" style="width:244px; height:200px">
+                        <div>
+                            <h5>14/05/2018
+                                <br>
+                                <b style="font-size:20px">Live Music</b><br>
+                                #live #rock #alternative
+                                <br>
+                            Special event for our rock fans!Live Music show.</div>
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                            <button style="background-color:skyblue;color: white;border-radius: 20px;border: none;height: 40px;">See more...</button>
+                        </div>
+                            </h5>
+                        </div>
+                    </div>
+                    <div style="width: 244px;margin-left:600px;color: black;float: left;background-color: white;height: 440px;position: absolute;top: 294px;left: 130px;"><img src="https://tse1.mm.bing.net/th?id=OIP.-jjhjH1feWeIqSL3AUfmEAHaE8&pid=Api&P=0&h=180" style="width:244px;  height:200px"><div>
+                        <h5>
+                            10/04/2018<br>
+                            <b style="font-size:20px;">DJ-Master Class</b><br>
+                            #dj #master-class<br>
+                            DJ WoodSmell will teach you new tricks:please sign up.
+                        </h5>
+                    </div>
+                    <div style="display: flex;justify-content: center;align-items: center;">
+                    <button style="background-color:skyblue;color: white;border-radius: 20px;border: none;height: 40px;">See more...</button>
+                </div>
+                </div>
+                    <div style="width: 244px;color: black;background-color: white;height: 440px;float: right;position: absolute;top: 295px;left: 980px;">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.IMyATVvehQRZAdEt7A_PugHaE7&pid=Api&P=0&h=180" style="width:244px; height:200px">
+                        <div>
+                            <h5>
+                                10/04/2018<br>
+                                <b style="font-size:20px;">Best Night Party</b><br>
+                                #party #club<br>
+                                Our traditional event:best hits all long.
+                            </h5>
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                            <button style="background-color:skyblue;color: white;border-radius: 20px;border: none;height: 40px;">See more...</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
