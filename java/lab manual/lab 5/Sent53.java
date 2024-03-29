@@ -1,36 +1,50 @@
 import java.util.Scanner;
+
 public class Sent53 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("plese eter your string");
-        String s=sc.nextLine();
-        Count a=new Count(s);
-        sc.close();
-        System.out.println(a);
+        while (true) {
+            String s = sc.nextLine();
+            if (s.equals("quit")) {
+                break;
+            } else {
+                s.toLowerCase();
+                Count.countVowels(s);
+            }
+        }
+        System.out.println("the total number of a&A is:" + Count.An);
+        System.out.println("the total number of e&E is:" + Count.En);
+        System.out.println("the total number of i&I is:" + Count.In);
+        System.out.println("the total number of o&O is:" + Count.On);
+        System.out.println("the total number of u&U is:" + Count.Un);
     }
 }
 
 class Count {
-    Count(String s){
-        int count=0;
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i)=='q'){
-                if (s.charAt(i+1)=='u') {
-                    if (s.charAt(i+2)=='i') {
-                        if (s.charAt(i+3)=='t') {
-                            break;
-                        }
-                    }
-                }
+    static int An = 0;
+    static int En = 0;
+    static int In = 0;
+    static int On = 0;
+    static int Un = 0;
+
+    static void countVowels(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)=='a'){
+                An++;
             }
-            if(s.charAt(i)=='A'||s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||s.charAt(i)=='U'){
-                count++;
+            else if(s.charAt(i)=='e'){
+                En++;
             }
-            if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u'){
-                count++;
+            else if(s.charAt(i)=='i'){
+                In++;
+            }
+            else if(s.charAt(i)=='o'){
+                On++;
+            }
+            else if(s.charAt(i)=='u'){
+                Un++;
             }
         }
-        System.out.println(count);
     }
-
 }
