@@ -30,6 +30,7 @@ public class Stablock {
                     }
                 }
                 line="";
+                
                 for (int i = 0; i < str.length-1; i++) {
                     line+=str[i]+" ";
                 }

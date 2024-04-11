@@ -1,24 +1,46 @@
+// public class Stablock {
+//     public static void main(String[] args) {
+//         System.out.println("hello world");
+//     }
+//     static{
+//         System.out.println("hello");
+//     }
+// }
 import java.io.*;
-
 public class Replace {
     public static void main(String[] args) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("def.txt"));
-            PrintWriter pw = new PrintWriter(new FileWriter("def.txt"));
-            pw.write("word my word wordis my word.\nWord word all the word");
             String line;
-            while ((line = br.readLine()) != null) {
-                String[] word=line.split("//s+");
-                for(int i=0;i<=word.length;i++){
-                    System.out.println(word[i].indexOf("word"));
+            int count=0;
+            PrintWriter pw = new PrintWriter("replace.txt");
+            pw.write("word1 my word1 word1is my word.\nWord1 word1 all the word");
+            pw.close();
+            pw = new PrintWriter("change.txt");
+            BufferedReader br= new BufferedReader(new FileReader("replace.txt"));
+            while ((line=br.readLine())!=null) {
+                /* 
+                line= line.replace("word1", "word2");
+                pw.write(line+"\n");
+                */
+                String[] str= line.split("\\s+");
+                for (int i = 0; i < str.length; i++) {
+                    if(str[i].equals("word1")){
+                        str[i]="word2";
+                        count++;
+                    }
                 }
+                line="";
+                
+                for (int i = 0; i < str.length-1; i++) {
+                    line+=str[i]+" ";
+                }
+                pw.write(line+"\n");
             }
+            System.out.println(count+" replacements done!");
             pw.close();
             br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException b) {
-            b.printStackTrace();
+        } catch (Exception e) {
+           e.printStackTrace();
         }
     }
 }
