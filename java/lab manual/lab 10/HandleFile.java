@@ -4,7 +4,7 @@ public class HandleFile {
         try{
             PrintWriter pw=new PrintWriter(new FileWriter("abc.txt"));
             pw.write("hello");
-            pw.write("my name is jainil");
+            pw.write("my name is jainil\ni study in darshan unversity");
             pw.close();
             BufferedReader br=new BufferedReader(new FileReader("abc.txt"));
             int countline=0;
@@ -14,7 +14,7 @@ public class HandleFile {
             while ((line=br.readLine())!=null) {
                 countline++;
                 countchar+=line.length();
-                countword=line.split("//s+").length;
+                countword+=line.split("\\s+").length;
             }
             br.close();
             System.out.println("the total words in file is:"+countword);
