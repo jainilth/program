@@ -15,6 +15,7 @@ public class HandleFile {
                 countline++;
                 countchar+=line.length();
                 countword+=line.split("\\s+").length;
+                // System.out.println(line);
             }
             br.close();
             System.out.println("the total words in file is:"+countword);

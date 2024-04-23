@@ -3,7 +3,7 @@ public class Matrix {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("plese enter total row of matrix");
-        int m=sc.nextInt();
+        int m=sc.nextInt();5
         System.out.println("plese eenter total col of matrix");
         int n=sc.nextInt();
         int  matrix[][]=new int[m][n];
