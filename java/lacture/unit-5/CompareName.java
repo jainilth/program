@@ -6,11 +6,12 @@ public class CompareName {
         al.add(new Student("vijay",23));
         al.add(new Student("ajay",27));
         al.add(new Student("jay",21));
+        al.add(new Student("Jay",21));
         System.out.println("sorting by age");
         Collections.sort(al,new AgeComparator());
         Iterator<Student> itr=al.iterator();
         while (itr.hasNext()) {
-            Student st=(Student)itr.next();
+            Student st=itr.next();
             System.out.println(st.name+" "+st.age);
         }
     }
