@@ -1,8 +1,8 @@
 import java.util.*;
 public class NmeThr {
     public static void main(String[] args) {
-        Move m= new Move(5,1000);
-        Move n=new Move(10,500);
+        Thread m= new Move(5,1000);
+        Thread n=new Move(10,500);
         m.start();
         n.start();
     }
