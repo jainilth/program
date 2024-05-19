@@ -23,5 +23,14 @@ int main()
     {
         cout << it << " ";
     }
+    cout << endl;
+    map<int, int> mpp;
+    mpp[1] = 2;
+    mpp.emplace(2,3);
+    mpp.insert({6, 7});
+    for (auto app : mpp)
+    {
+        cout << app.first << " " << app.second <<"  ";
+    }
     return 0;
 }
