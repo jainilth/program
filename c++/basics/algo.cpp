@@ -15,11 +15,11 @@ int main()
     {
         cout << b[i] << " ";
     }
-    string s="123";
+    string s = "123";
     do
     {
-        cout<<s<<endl;
-    } while (next_permutation(s.begin(),s.end()));
-    
+        cout << s << endl;
+    } while (next_permutation(s.begin(), s.end()));
+
     return 0;
 }
