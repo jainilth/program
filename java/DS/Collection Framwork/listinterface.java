@@ -11,6 +11,7 @@ public class listinterface {
         System.out.println(list);
         list.set(3, 200);  //set element not add
         list.add(3, 100);  //add element at specified index
+        list.remove(0);
         System.out.println(list);
     }
 }
