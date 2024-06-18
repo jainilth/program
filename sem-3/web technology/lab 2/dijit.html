@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let num = Number(prompt("Enter a number between 0-999"))
+
+        if (!num || isNaN(num)) {
+            alert("Not a number")
+        }
+
+        if (num < 0 || num > 999) {
+            alert("Out of range")
+        }
+
+        let ones = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+        let teens = ['Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+        let tens = ['', 'ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+        let word = '';
+        let dijit = []
+        let a = 0
+        while (num > 0) {
+            a = num % 10
+            console.log(a)
+            dijit.push(a)
+            num = parseInt(num / 10)
+        }
+        
+    </script>
+</body>
+
+</html>
