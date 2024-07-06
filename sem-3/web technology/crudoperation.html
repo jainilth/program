@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" id="txtName" requried>
+        <button onclick="addStudent()">add</button><br>
+        <span id="errmsg">
+
+        </span>
+    </div>
+    <script type="text/javascript">
+        students = ['arjun', 'darshan', 'rajkot']
+        idToUpdate = -1;
+        function displayStudent() {
+            temp = document.getElementById('result')
+            tempString = "<table border='1'>";
+            for (i = 0; i < students.length; i++) {
+                tempString += "<tr>";
+                tempString += "<td>";
+                tempString += students[i];
+                tempString += "</td>";
+                tempString += "<td>";
+                tempString += "<button onclick='deleteStudent(" + i + ")'>Delete</button>";
+                tempString += "</td>";
+                tempString += "<td>";
+                tempString += "<button onclick='setStudent(" + i + ")'>Edit</button>";
+                tempString += "</td>";
+                tempString += "</tr>";
+            }
+            tempString += "</table>";
+            temp.innerHTML = tempString;
+        }
+        
+    </script>
+</body>
+
+</html>
