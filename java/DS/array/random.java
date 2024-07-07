@@ -4,7 +4,6 @@ public class random {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int max=size;
-        int[] array = new int[size];
         int[] a=new int[size];
         int[] b=new int[size];
         boolean[] used = new boolean[size];
@@ -16,7 +15,7 @@ public class random {
             do {
                 num = (int) (Math.random() * (max));
             } while (used[num]);
-            array[i] = num;
+            b[i] = a[num];
             used[num] = true;
         }
         for (int i = 0; i < size; i++) {
@@ -24,7 +23,6 @@ public class random {
         }
         System.out.println("");
         for (int i = 0; i < size; i++) {
-            b[i]=a[array[i]];
             System.out.print(b[i]+" ");
         }
     }

@@ -15,15 +15,15 @@ class Stackx{
             return;
         }
     }
-    void pop(){
+    int pop(){
         if(top==-1){
             System.out.println("Stack is empty");
+            return 0;
         }
-        else{
             top--;
-            int a=arr[top+1];
+            System.out.println(arr[top+1]);
             arr[top+1]=0;
-        }
+            return arr[top+1];
     }
     void displayStack(){
         for(int i=0;i<=top;i++){
@@ -31,13 +31,15 @@ class Stackx{
         }
         System.out.println("");
     }
-    void peep(int i){
+    int peep(int i){
         if(top-i+1<0){
             System.out.println("Stack is empty");
+            return 0;
         }
         else{
             System.out.println(arr[top-i+1]);
             arr[top-i+1]=0;
+            return arr[top-i+1];
         }
     }
     void change(int i,int x){
@@ -57,6 +59,7 @@ public class StackDemo{
         s.push(3);
         s.push(4);
         s.push(5);
+        s.displayStack();
         s.pop();
         s.displayStack();
         s.peep(3);
