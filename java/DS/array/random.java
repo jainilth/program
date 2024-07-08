@@ -18,12 +18,5 @@ public class random {
             b[i] = a[num];
             used[num] = true;
         }
-        for (int i = 0; i < size; i++) {
-            System.out.print(a[i]+" ");
-        }
-        System.out.println("");
-        for (int i = 0; i < size; i++) {
-            System.out.print(b[i]+" ");
-        }
     }
 }
