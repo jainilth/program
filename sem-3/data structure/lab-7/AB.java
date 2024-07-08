@@ -28,6 +28,40 @@ class Stack3{
 }
 public class AB {
     public static void main(String[] args) {
-        
+        Stack3 s1=new Stack3(20);
+        Stack3 s2=new Stack3(20);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("plese enter a string");
+        String s=sc.next();
+        s.toLowerCase();
+        for(int i=0;i<s.length();i++){
+            if(s.length()%2!=0){
+                System.out.println("invalid String");
+                return;
+            }
+            if(s.charAt(i)!='a'&&s.charAt(i)!='b'){
+                System.out.println("invalid");
+                return;
+            }
+            if(s.charAt(i)=='a'){
+                s1.push(s.charAt(i));
+            }
+            if(s.charAt(i)=='b'){
+                s2.push(s.charAt(i));
+            }
+        }
+        int i=0,j=0;
+        while(s1.top!=-1){
+            char x=s1.pop();
+            char y=s2.pop();
+            i++;
+            j++;
+        }
+        if(i==j){
+            System.out.println("valid");
+        }
+        else{
+            System.out.println("invalid");
+        }
     }
 }
