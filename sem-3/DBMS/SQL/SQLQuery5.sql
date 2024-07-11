@@ -1,10 +1,10 @@
 --Lab 5 Perform SQL queries for Like operator
 --Part – A:
---Create following table using query according to the definition.CREATE TABLE STUDENT(STUID INT,FIRSTNAME VARCHAR(25),LASTNAME VARCHAR(25),WEBSITE VARCHAR(50),CITY VARCHAR(25),ADDRESS VARCHAR(100))INSERT INTO STUDENT(STUID,FIRSTNAME,LASTNAME,WEBSITE,CITY,ADDRESS)VALUES(1011,'Keyur','Patel','techonthenet.com','Rajkot','A-303 ‘Vasant Kunj’, Rajkot'),
-(1022,'Hardik','Shah','digminecraft.com','Ahmedabad','“Ram Krupa”, Raiya Road'),
+--Create following table using query according to the definition.CREATE TABLE STUDENT(STUID INT,FIRSTNAME VARCHAR(25),LASTNAME VARCHAR(25),WEBSITE VARCHAR(50),CITY VARCHAR(25),ADDRESS VARCHAR(100))INSERT INTO STUDENT(STUID,FIRSTNAME,LASTNAME,WEBSITE,CITY,ADDRESS)VALUES(1011,'Keyur','Patel','techonthenet.com','Rajkot','A-303 ''Vasant Kunj'', Rajkot'),
+(1022,'Hardik','Shah','digminecraft.com','Ahmedabad','"Ram Krupa", Raiya Road'),
 (1033,'Kajal','Trivedi','bigactivities.com','Baroda','Raj bhavan plot, near
 garden'),
-(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','“Jig’s Home”, Narol'),
+(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','"Jig''s Home", Narol'),
 (1055,'Harmit','Mitel','@me.darshan.com','Rajkot','B-55, Raj Residency'),
 (1066,'Ashok','Jani',NULL,'Baroda','A502, Club House Building')
 
@@ -20,7 +20,7 @@ WHERE FIRSTNAME LIKE '______'
 
 --3. Retrieve the first name & last name of students whose city name ends with a & contains six characters.
 SELECT FIRSTNAME,LASTNAME FROM STUDENT
-WHERE CITY LIKE '%_____A'
+WHERE CITY LIKE '_____A'
 
 --4. Display all the students whose last name ends with ‘tel’.
 SELECT * FROM STUDENT
@@ -63,7 +63,8 @@ SELECT*FROM STUDENT
 WHERE WEBSITE IS NULL AND LEN(FIRSTNAME)>=5
 
 --14. Display all the students whose last name starts with ‘Pat’.
-
+SELECT*FROM STUDENT
+WHERE LASTNAME LIKE 'PAT%'
 
 --15. Display all the students whose city name does not starts with ‘b’.
 SELECT*FROM STUDENT

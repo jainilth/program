@@ -20,8 +20,8 @@ public class insert {
                 d[i] = a[i - 1];
             }
         }
-        for (int i = 0; i < n+1; i++) {
-            System.out.print(d[i]+" ");
+        for (int i = 0; i < n + 1; i++) {
+            System.out.print(d[i] + " ");
         }
     }
 }
