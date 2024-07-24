@@ -34,6 +34,7 @@ class LL {
             System.out.print(temp.info + " ");
             temp = temp.link;
         }
+        System.out.println(count);
     }
 
     void insertAtEnd(int x) {
