@@ -3,7 +3,7 @@ import java.util.*;
 public class Account {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        while(true){
+        while (true) {
             System.out.println("plese enter what you want deposite or withdraw");
             System.out.println("you have the option 1 or 2");
             int n = sc.nextInt();
@@ -15,21 +15,32 @@ public class Account {
                 break;
             }
             double a = sc.nextDouble();
-            BankAccount b1 = new BankAccount(n, a);
+            System.out.println("enter your balance");
+            double b = sc.nextDouble();
+            System.out.println("please enter account number and name");
+            int c = sc.nextInt();
+            String d = sc.next();
+            BankAccount b1 = new BankAccount(n, a, b, c, d);
             b1.whichDoYouWant();
+            b1.displayInfo();
         }
         sc.close();
     }
 }
 
 class BankAccount {
-    static private double balance = 10000;
+    static private double balance;
     int n;
     double a;
+    int b;
+    String c;
 
-    BankAccount(int b, double a) {
-        n = b;
+    BankAccount(int n, double a, double balance, int b, String c) {
+        this.balance = balance;
+        this.n = n;
         this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
     public void whichDoYouWant() {
@@ -45,9 +56,14 @@ class BankAccount {
         }
     }
 
+    public void displayInfo() {
+        System.out.println(balance);
+        System.out.println(c);
+    }
+
     public void withdrawMoney() {
         try {
-            if (balance-a < 0) {
+            if (balance - a < 0) {
                 throw new NotEnoughMoney();
             } else {
                 balance = balance - a;
