@@ -1,6 +1,84 @@
+class LL1 {
+    class Node {
+        int info;
+        Node link;
+
+        public Node(int data) {
+            this.info = data;
+            this.link = null;
+        }
+    }
+
+    public Node first = null;
+
+    void insertAtFirst(int x) {
+        Node newNode = new Node(x);
+        if (first == null) {
+            first = newNode;
+            return;
+        } else {
+            newNode.link = first;
+            first = newNode;
+        }
+    }
+
+    void display() {
+        Node temp = first;
+        while (temp != null) {
+            System.out.print(temp.info + " ");
+            temp = temp.link;
+        }
+    }
+
+    void insertAtEnd(int x) {
+        Node newNode = new Node(x);
+        if (first == null) {
+            first = newNode;
+            return;
+        } else {
+            Node temp = first;
+            while (temp.link != null) {
+                temp = temp.link;
+            }
+            temp.link = newNode;
+        }
+    }
+
+    void deleteDuplicate() {
+        // Node temp = first;
+        // Node save = first;
+        // while (temp.link != null) {
+        // if (temp.info == temp.link.info) {
+        // temp = temp.link;
+        // } else {
+        // System.out.print(save.info + " ");
+        // temp = temp.link;
+        // save.link = temp;
+        // }
+        // }
+        Node temp = first;
+        Node save = first;
+        while (temp.link != null) {
+            if (temp.info == temp.link.info) {
+                if(temp.link.link==null){
+                    System.out.println(save.info);
+                    return;
+                }
+                else{
+                    temp.link = temp.link.link;
+                }
+            } else {
+                System.out.print(save.info + " ");
+                temp = temp.link;
+                save = temp;
+            }
+        }
+        // System.out.println(temp.info);
+    }
+}
 public class DeleteDuplSort {
     public static void main(String[] args) {
-        LL l1=new LL();
+        LL1 l1=new LL1();
         l1.insertAtFirst(10);
         l1.insertAtEnd(20);
         l1.insertAtEnd(20);
@@ -10,7 +88,8 @@ public class DeleteDuplSort {
         l1.insertAtEnd(45);
         l1.insertAtEnd(45);
         l1.display();
-        deleteDuplicate(l1);
+        System.out.println("");
+        l1.deleteDuplicate();
     }
     
 }
