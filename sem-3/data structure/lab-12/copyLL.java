@@ -54,37 +54,6 @@ class LL {
         }
     }
 
-
-    void deleteDuplicate() {
-        // Node temp = first;
-        // Node save = first;
-        // while (temp.link != null) {
-        //     if (temp.info == temp.link.info) {
-        //         temp = temp.link;
-        //     } else {
-        //         System.out.print(save.info + " ");
-        //         temp = temp.link;
-        //         save.link = temp;
-        //     }
-        // }
-        Node temp = first;
-        Node save = first;
-        while (temp.link != null) {
-            if (temp.info == temp.link.info) {
-                temp.link= temp.link.link;
-            } else {
-                System.out.print(save.info + " ");
-                temp = temp.link;
-                save = temp;
-            }
-        }
-
-        System.out.println(temp.info);
-
-    }
-
-    
-
     void copyLL() {
         Node temp = first;
         Node head = null;
@@ -118,9 +87,6 @@ public class copyLL {
         l1.insertAtEnd(45);
         l1.insertAtEnd(45);
         l1.display();
-        System.out.println("");
-        l1.deleteDuplicate();
-
-        // list.copyLL();
+        l1.copyLL();
     }
 }
