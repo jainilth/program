@@ -32,6 +32,6 @@ class Stacky {
 
 public class InfixToPostfix {
     public static void main(String[] args) {
-
+        
     }
 }
