@@ -28,7 +28,6 @@ class Stack2 {
         top--;
         return a[top + 1];
     }
-
     void recognizeString() {
         push('c');
         int i = 0;
@@ -62,7 +61,8 @@ public class StringRecognize {
         Scanner sc = new Scanner(System.in);
         System.out.println("plese enter string");
         String s = sc.next();
-        Stack2 s2 = new Stack2(s);
-        s2.recognizeString();
+        Stack2 s1 = new Stack2(s);
+        s1.recognizeString();
+
     }
 }
