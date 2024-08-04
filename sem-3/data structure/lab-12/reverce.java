@@ -46,22 +46,29 @@ class LL2 {
             temp.link = newNode;
         }
     }
-    void reverce(){
-        Node temp=first;
-        Node prev=null;
-        Node new1=null;
-        while(temp!=null){
-            new1=temp.link;
-            temp.link=prev;
-            prev=temp;
-            temp=new1;
+
+    void reverce() {
+        if (first == null) {
+            System.out.println("Linked list does not exist");
+            return;
+        } else {
+            Node temp = first;
+            Node prev = null;
+            Node new1 = null;
+            while (temp != null) {
+                new1 = temp.link;
+                temp.link = prev;
+                prev = temp;
+                temp = new1;
+            }
         }
-        first=prev;
+        first = prev;
     }
 }
+
 public class reverce {
     public static void main(String[] args) {
-        LL2 l1=new LL2();
+        LL2 l1 = new LL2();
         l1.insertAtFirst(10);
         l1.insertAtEnd(20);
         l1.insertAtEnd(20);
