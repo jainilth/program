@@ -1,4 +1,6 @@
-class LL2 {
+import org.w3c.dom.Node;
+
+class LL3 {
     class Node {
         int info;
         Node link;
@@ -44,39 +46,41 @@ class LL2 {
             temp.link = newNode;
         }
     }
-
-    void reverce() {
+    void sortList(){
         if (first == null) {
-            System.out.println("Linked list does not exist");
+            System.out.println("underflow");
             return;
-        } else {
-            Node temp = first;
-            Node prev = null;
-            Node new1 = null;
-            while (temp != null) {
-                new1 = temp.link;
-                temp.link = prev;
-                prev = temp;
-                temp = new1;
+        }
+        else{
+            Node prev=first;
+            Node next=first;
+            while(prev.link!=null){
+                next=prev;
+                while(next.link!=null){
+                    next=next.link;
+                    if(prev.info>next.info){
+                        int temp=prev.info;
+                        prev.info=next.info;
+                        next.info=temp;
+                    }
+                }
+                prev=prev.link;
             }
         }
-        first = prev;
     }
 }
-
-public class reverce {
+public class sortLL {
     public static void main(String[] args) {
-        LL2 l1 = new LL2();
+        LL3 l1 = new LL3();
         l1.insertAtFirst(10);
+        l1.insertAtEnd(50);
+        l1.insertAtEnd(34);
+        l1.insertAtEnd(23);
+        l1.insertAtEnd(90);
         l1.insertAtEnd(20);
-        l1.insertAtEnd(20);
-        l1.insertAtEnd(30);
-        l1.insertAtEnd(30);
-        l1.insertAtEnd(40);
-        l1.insertAtEnd(45);
-        l1.insertAtEnd(45);
-        l1.display();
-        l1.reverce();
+        l1.insertAtEnd(80);
+        l1.insertAtEnd(1);
+        l1.sortList();
         l1.display();
     }
 }
