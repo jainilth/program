@@ -105,7 +105,7 @@ public class StackImplement {
         LL2 list = new LL2();
         list.push(10);
         list.push(20);
-        list.push(30);
+        list.push(25);
         list.push(40);
         list.display();
         list.pop();
