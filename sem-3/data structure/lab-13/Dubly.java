@@ -1,48 +1,50 @@
-class CLL {
-    class Node {
+class DoublyLL {
+    static class Node {
         int info;
-        Node link;
+        Node lptr;
+        Node rptr;
 
         public Node(int data) {
-            this.info = data;
-            this.link = null;
+            info = data;
+            lptr = null;
+            rptr = null;
         }
     }
-
-    public Node first;
-    public Node last;
-
-    public void insertAtFirst(int x) {
-        Node newNode = new Node(x);
-        if (first == null) {
-            newNode.link=newNode;
-            first=last=newNode;
-            return;
-        } else {
-            newNode.link=first;
-            last.link=newNode;
+    Node first=null;
+    void insertAtFirst(int x){
+        Node newNode=new Node(x);
+        if(first==null){
             first=newNode;
             return;
         }
+        else{
+            newNode.rptr=first;
+            newNode.lptr=null;
+            first.lptr=newNode;
+            first=newNode;
+        }
     }
     void insertAtLast(int x){
-        Node newNode = new Node(x);
-        if (first == null) {
-            newNode.link=newNode;
-            first=last=newNode;
-            return;
-        } else {
-            newNode.link=first;
-            last.link=newNode;
-            last=newNode;
+        Node newNode=new Node(x);
+        if(first==null){
+            first=newNode;
             return;
         }
-    } 
+        else{
+            Node temp=first;
+            while(temp.rptr!=null){
+                temp=temp.rptr;
+            }
+            temp.rptr=newNode;
+            newNode.lptr=temp;
+            newNode.rptr=null;
+        }
+    }
     int countNode() {
         int n = 1;
         Node temp = first;
-        while (temp != last) {
-            temp = temp.link;
+        while (temp.rptr != null) {
+            temp = temp.rptr;
             n++;
         }
         return n;
@@ -57,17 +59,16 @@ class CLL {
         Node save = first;
         Node pred = save;
         if (index == 1) {
-            first = first.link;
+            first = first.rptr;
+            first.lptr=null;
             return;
         }
         if (index == countNode()) {
             Node temp = first;
-            while (temp.link != last) {
-                temp = temp.link;
-
+            while (temp.rptr.rptr !=null) {
+                temp = temp.rptr;
             }
-            temp.link = temp.link.link;
-            last = temp;
+            temp.rptr=null;
             return;
         }
         if (index > countNode() || index < 1) {
@@ -75,16 +76,16 @@ class CLL {
             return;
         }
         while (count != index) {
-            save = save.link;
+            save = save.rptr;
             if (count == index - 1) {
-                pred.link = save.link;
+                pred.rptr = save.rptr;
+                save.rptr.lptr=pred;
                 return;
             }
             pred = save;
             count++;
         }
     }
-
     public void printData() {
         if (first == null) {
             System.out.println("List is empty");
@@ -94,25 +95,21 @@ class CLL {
         Node current = first;
         do {
             System.out.print(current.info + " ");
-            current = current.link;
-        } while (current != first);
+            current = current.rptr;
+        } while (current!= null);
         System.out.println();
     }
 }
 
-public class CircularLL {
+public class Dubly {
     public static void main(String[] args) {
-        CLL l1 = new CLL();
+        DoublyLL l1=new DoublyLL();
+        l1.insertAtFirst(10);
         l1.insertAtFirst(10);
         l1.insertAtLast(20);
         l1.insertAtLast(30);
-        l1.insertAtLast(40);
-        l1.insertAtLast(50);
-        l1.insertAtLast(60);
-        l1.insertAtLast(70);
-        l1.insertAtLast(80);
-        l1.deleteSpecify(5);
-        l1.printData();
         System.out.println(l1.countNode());
+        l1.deleteSpecify(1);
+        l1.printData();
     }
 }

@@ -7,7 +7,7 @@ public class Linear {
         boolean f=false;
         for(int i=0;i<a.length;i++){
             if(a[i]==b){
-                System.out.println("the number is available at "+(i+1)+"position");
+                System.out.println("the number is available at "+(i+1)+" position");
                 f=true;
                 break;
             }
