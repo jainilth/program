@@ -45,17 +45,6 @@ class LL1 {
     }
 
     void deleteDuplicate() {
-        // Node temp = first;
-        // Node save = first;
-        // while (temp.link != null) {
-        // if (temp.info == temp.link.info) {
-        // temp = temp.link;
-        // } else {
-        // System.out.print(save.info + " ");
-        // temp = temp.link;
-        // save.link = temp;
-        // }
-        // }
         Node temp = first;
         Node save = first;
         while (temp.link != null) {
@@ -73,7 +62,6 @@ class LL1 {
                 save = temp;
             }
         }
-        // System.out.println(temp.info);
     }
 }
 public class DeleteDuplSort {

@@ -46,29 +46,47 @@ class LL3 {
             temp.link = newNode;
         }
     }
-    void sortList(){
+
+    int findGcd(int a, int b) {
+        while (a > 0 && b > 0) {
+            if (a > b)
+                a = a % b;
+            else
+                b = b % a;
+        }
+        if (a == 0)
+            return b;
+        else
+            return a;
+    }
+
+    void gcdNodeList() {
+        
+    }
+
+    void sortList() {
         if (first == null) {
             System.out.println("underflow");
             return;
-        }
-        else{
-            Node prev=first;
-            Node next=first;
-            while(prev.link!=null){
-                next=prev;
-                while(next.link!=null){
-                    next=next.link;
-                    if(prev.info>next.info){
-                        int temp=prev.info;
-                        prev.info=next.info;
-                        next.info=temp;
+        } else {
+            Node prev = first;
+            Node next = first;
+            while (prev.link != null) {
+                next = prev;
+                while (next.link != null) {
+                    next = next.link;
+                    if (prev.info > next.info) {
+                        int temp = prev.info;
+                        prev.info = next.info;
+                        next.info = temp;
                     }
                 }
-                prev=prev.link;
+                prev = prev.link;
             }
         }
     }
 }
+
 public class sortLL {
     public static void main(String[] args) {
         LL3 l1 = new LL3();
