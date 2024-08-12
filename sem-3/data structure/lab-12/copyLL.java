@@ -53,7 +53,24 @@ class LL {
             temp.link = newNode;
         }
     }
-
+    void findMiddle(){
+        Node temp=first;
+        Node newNode=first;
+        while (newNode.link != null&&newNode.link.link!=null) {
+            temp = temp.link;
+            newNode = newNode.link.link;
+        }
+        System.out.println(temp.info);
+    }
+    void lastKthFind(int k){
+        Node temp=first;
+        int count=1;
+        while(temp.link!=null&&count<(k)){
+            temp=temp.link;
+            count++;
+        }
+        System.out.println(temp.info);
+    }
     void copyLL() {
         Node temp = first;
         Node head = null;
@@ -78,14 +95,15 @@ class LL {
 public class copyLL {
     public static void main(String[] args) {
         LL l1 = new LL();
-        l1.insertAtFirst(10);
+        l1.insertAtFirst(1);
         l1.insertAtEnd(20);
-        l1.insertAtEnd(20);
+        l1.insertAtEnd(25);
         l1.insertAtEnd(30);
-        l1.insertAtEnd(30);
+        l1.insertAtEnd(35);
         l1.insertAtEnd(40);
         l1.insertAtEnd(45);
-        l1.insertAtEnd(45);
+        l1.insertAtEnd(50);
+        l1.lastKthFind(3);
         l1.display();
         l1.copyLL();
     }
