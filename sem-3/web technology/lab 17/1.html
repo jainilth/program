@@ -16,7 +16,7 @@
 <body>
 	<h1 id="currentScore">0</h1>
 	<img onclick="addScore()" id="myImg" src="../osama-bin-laden-photograph.jpg" width="100px">
-
+	<button id="clear" onclick="refresh()">restart</button>
 	<script type="text/javascript">
 		currentScore = 0;
 		function displayImage(){
@@ -27,6 +27,9 @@
                 document.getElementById('myImg').style.left = l+"px";
             }
 		}
+		function refresh(){
+			clearInterval(intervalId);
+		}
 		function addScore(){
 			currentScore++;
 			document.getElementById('currentScore').innerHTML = currentScore
@@ -35,7 +38,6 @@
 			setTimeout(() => {
 				intervalPaused = false;
 			}, 2);
-
 			displayImage();
 		}
         intervalId = setInterval(displayImage, 1000);
