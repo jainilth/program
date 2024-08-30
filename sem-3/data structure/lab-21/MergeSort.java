@@ -32,12 +32,11 @@ public class MergeSort {
 
     public static void merge_sort(int[] a, int low, int high) {
         int mid = 0;
-        if (low < high) {
+        if (low >= high) return;
             mid = (low + high) / 2;
             merge_sort(a, low, mid);
             merge_sort(a, mid + 1, high);
             merge(a, low, mid, high);
-        }
     }
 
     public static void main(String[] args) {
