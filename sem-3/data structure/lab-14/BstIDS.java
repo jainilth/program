@@ -64,18 +64,44 @@ class BinarySearchTree {
         return;
     }
 
-    Node insertRecord(Node root, int data) {
+
+    void insertInBTS(int x) {
+        Node newNode = new Node(x);
         if (root == null) {
-            root = new Node(data);
-            return root;
-        }
-        if (data < root.key) {
-            root.left = insertRecord(root.left, data);
+            root = newNode;
         } else {
-            root.right = insertRecord(root.right, data);
+            Node temp = root;
+            Node parent = null;
+
+            while (temp != null) {
+                parent = temp;
+                if (x < temp.info) {
+                    temp = temp.left;
+                } else {
+                    temp = temp.right;
+                }
+            }
+
+            if (x < parent.info) {
+                parent.left = newNode;
+            } else {
+                parent.right = newNode;
+            }
         }
-        return root;
     }
+
+    // Node insertRecord(Node root, int data) {
+        // if (root == null) {
+        //     root = new Node(data);
+        //     return root;
+        // }
+        // if (data < root.key) {
+        //     root.left = insertRecord(root.left, data);
+        // } else {
+        //     root.right = insertRecord(root.right, data);
+        // }
+        // return root;
+    // }
 
     Node deleteNode(Node root, int data) {
         if (root == null)
@@ -99,7 +125,6 @@ class BinarySearchTree {
 
         return root;
     }
-
     int minValue(Node root) {
         int minv = root.key;
         while (root.left != null) {
@@ -110,7 +135,7 @@ class BinarySearchTree {
     }
 
     void insert(int data) {
-        root = insertRecord(root, data);
+        root = insertInBTS(root, data);
     }
 
     boolean search(int data) {
@@ -151,6 +176,9 @@ public class BstIDS {
         b.insert(70);
         b.insert(60);
         b.insert(80);
+        b.insert(35);
+        b.insert(45);
+        b.insert(31);
         b.preO();
         System.out.println("");
         b.inO();
