@@ -75,14 +75,14 @@ class BinarySearchTree {
 
             while (temp != null) {
                 parent = temp;
-                if (x < temp.info) {
+                if (x < temp.key) {
                     temp = temp.left;
                 } else {
                     temp = temp.right;
                 }
             }
 
-            if (x < parent.info) {
+            if (x < parent.key) {
                 parent.left = newNode;
             } else {
                 parent.right = newNode;
@@ -134,12 +134,18 @@ class BinarySearchTree {
         return minv;
     }
 
-    void insert(int data) {
-        root = insertInBTS(root, data);
-    }
-
-    boolean search(int data) {
-        return searchRec(root, data);
+    boolean searchRec(int x) {
+        Node temp = root;
+        while (temp != null) {
+            if (x == temp.key) {
+                return true;
+            } else if (x < temp.key) {
+                temp = temp.left;
+            } else {
+                temp = temp.right;
+            }
+        }
+        return false;
     }
 
     boolean searchRec(Node root, int data) {
@@ -169,16 +175,16 @@ class BinarySearchTree {
 public class BstIDS {
     public static void main(String[] args) {
         BinarySearchTree b = new BinarySearchTree();
-        b.insert(50);
-        b.insert(30);
-        b.insert(20);
-        b.insert(40);
-        b.insert(70);
-        b.insert(60);
-        b.insert(80);
-        b.insert(35);
-        b.insert(45);
-        b.insert(31);
+        b.insertInBTS(50);
+        b.insertInBTS(30);
+        b.insertInBTS(20);
+        b.insertInBTS(40);
+        b.insertInBTS(70);
+        b.insertInBTS(60);
+        b.insertInBTS(80);
+        b.insertInBTS(35);
+        b.insertInBTS(45);
+        b.insertInBTS(31);
         b.preO();
         System.out.println("");
         b.inO();
@@ -192,6 +198,6 @@ public class BstIDS {
         System.out.println("");
         b.postO();
         System.out.println("");
-        System.out.println(b.search(60));
+        System.out.println(b.searchRec(60));
     }
 }
