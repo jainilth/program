@@ -1,4 +1,4 @@
-import {React,useState } from 'react';
+import { React, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -49,7 +49,7 @@ function Layout() {
           <div className='col-9 d-flex justify-content-center p-4 mx-1 border border-primary'>
             <Link to='/home' className='mx-3 fs-4'>home</Link>
             <Link to='/about' className='mx-3 fs-4'>about</Link>
-            <Link to='/contact' className='mx-3 fs-4'>contact</Link>
+            <Link to='/contact' className='mx-3 fs-4'>add</Link>
             <Link to='/student' className='mx-3 fs-4'>student</Link>
           </div>
         </div>
@@ -85,11 +85,59 @@ function About() {
   )
 }
 function Contact() {
+  const [Student, setStudent] = useState([])
+  const [student, setData] = useState({ name: '', sem: '' })
+  // const [index, setIndex] = useState('')
+
+  const Dis = () => {
+    const shyam = Student.map((e) => {
+      return (
+        <>
+          <tr>
+            <td>Name:{e.name}</td>
+            <td>sem:{e.sem}</td>
+          </tr>
+        </>
+      );
+    })
+    return (
+      <>
+        <div>
+          <table>
+            {shyam}
+          </table>
+        </div>
+
+      </>
+    );
+  }
   return (
     <>
-      <h1>contact</h1>
+      <input type='text' value={student.name} onChange={(e) => {
+        setData({ ...student, name: e.target.value })
+      }
+      } />
+      <input type='number' value={student.sem} onChange={(e) => {
+        setData({ ...student, sem: e.target.value })
+      }
+      } />
+      <br />
+      <button id="addedit" onClick={
+        (e) => {
+          e.preventDefault();
+          if (document.getElementById('addedit').innerHTML === 'Add') {
+            setStudent([student, ...Student]);
+            setData({ ...student, name: "", sem: "" });
+          }
+          else {
+
+          }
+        }}>Add</button>
+      <div>
+        <Dis />
+      </div>
     </>
-  )
+  );
 }
 function Student() {
   const [countState, setCountState] = useState(0)
