@@ -8,5 +8,6 @@ public class Area {
         double ans;
         ans = Math.PI * a * a;
         System.out.println(ans);
+        sc.close();
     }
 }

@@ -63,6 +63,6 @@ public class StringRecognize {
         String s = sc.next();
         Stack2 s1 = new Stack2(s);
         s1.recognizeString();
-
+        sc.close();
     }
 }

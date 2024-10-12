@@ -15,5 +15,6 @@ public class duplicate {
                 continue;
             }
         }
+        sc.close();
     }
 }

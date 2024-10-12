@@ -10,5 +10,6 @@ public class sum {
             ans += i;
         }
         System.out.println(ans);
+        sc.close();
     }
 }

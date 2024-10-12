@@ -11,5 +11,6 @@ public class SwitchCase {
             s=s.toLowerCase();
         }
         System.out.println(s);
+        sc.close();
     }
 }

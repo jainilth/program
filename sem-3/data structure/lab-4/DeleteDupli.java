@@ -3,6 +3,6 @@ public class DeleteDupli {
         int[] arr = {1, 2, 2, 3, 4, 4, 5};
         int n = arr.length;
         int[] temp = new int[n];
-        
+        System.out.println(temp);
     }
 }

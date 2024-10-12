@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 class LL3 {
     class Node {
         int info;

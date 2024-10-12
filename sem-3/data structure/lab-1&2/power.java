@@ -8,5 +8,6 @@ public class power {
         double ans;
         ans = Math.pow(i, n);
         System.out.println(ans);
+        sc.close();
     }
 }

@@ -1,7 +1,3 @@
-import java.util.*;
-
-import org.w3c.dom.Node;
-
 //  Insert a node at the front of the linked list. 
 //  Display all nodes. 
 //  Delete a first node of the linked list. 

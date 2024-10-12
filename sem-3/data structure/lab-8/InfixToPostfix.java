@@ -152,5 +152,6 @@ public class InfixToPostfix {
         Stacky s1 = new Stacky(s);
         String ans=s1.convert(); 
         System.out.println(ans);
+        sc.close();
     }
 }

@@ -1,3 +1,4 @@
+import java.util.Stack;
 import java.util.*;
 
 public class EvaluationPost {
@@ -47,5 +48,6 @@ public class EvaluationPost {
         String s = sc.next();
         double ans = eval(s);
         System.out.println(ans);
+        sc.close();
     }
 }

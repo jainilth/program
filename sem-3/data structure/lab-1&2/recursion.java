@@ -6,6 +6,7 @@ public class recursion {
         int n = sc.nextInt();
         int ans = fac(n);
         System.out.println(ans);
+        sc.close();
     }
 
     public static int fac(int n) {

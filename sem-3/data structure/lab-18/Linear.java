@@ -15,5 +15,6 @@ public class Linear {
         if(!f){
             System.out.println("there is no element present in array");
         }
+        sc.close();
     }
 }

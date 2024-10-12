@@ -10,5 +10,6 @@ public class Vowel {
         } else {
             System.out.println("not");
         }
+        sc.close();
     }
 }

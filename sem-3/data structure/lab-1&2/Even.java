@@ -9,5 +9,6 @@ public class Even {
         } else {
             System.out.println("odd");
         }
+        sc.close();
     }
 }

@@ -22,5 +22,6 @@ public class Position {
         }
         System.out.println(pl);
         System.out.println(ps);
+        sc.close();
     }
 }

@@ -9,6 +9,7 @@ public class Temprature {
         c = sc.nextFloat();
         f = (c*(9/5))+32;
         System.out.println("Tempature in F : "+f);
+        sc.close();
     }
     public void FToC(){
         Scanner sc = new Scanner(System.in);
@@ -16,6 +17,7 @@ public class Temprature {
         f = sc.nextFloat();
         c = (f-35)*(5/9);
         System.out.println("Tempature in C : "+c);
+        sc.close();
     }public static void main(String[] args) {
         Temprature t = new Temprature();
         t.CToF();

@@ -37,6 +37,7 @@ public class AB {
         Scanner sc = new Scanner(System.in);
         System.out.println("plese enter a string");
         String s = sc.next();
+        sc.close();
         s.toLowerCase();
         for (int i = 0; i < s.length(); i++) {
             if (s.length() % 2 != 0) {
@@ -56,8 +57,8 @@ public class AB {
         }
         int i = 0, j = 0;
         while (s1.top != -1) {
-            char x = s1.pop();
-            char y = s2.pop();
+            s1.pop();
+            s2.pop();
             i++;
             j++;
         }

@@ -59,8 +59,8 @@ class LL2 {
                 prev = temp;
                 temp = new1;
             }
+            first = prev;
         }
-        first = prev;
     }
 }
 

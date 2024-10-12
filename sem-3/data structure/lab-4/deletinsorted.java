@@ -4,6 +4,7 @@ public class deletinsorted {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
+        sc.close();
         int a[] = { 2, 3, 5, 7, 9, 13 };
         int b[] = new int[6];
         int index = 0;

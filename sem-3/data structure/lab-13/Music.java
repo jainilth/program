@@ -195,5 +195,6 @@ public class Music {
                 break;
             }
         }
+        sc.close();
     }
 }

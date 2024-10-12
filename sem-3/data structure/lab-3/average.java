@@ -10,5 +10,6 @@ public class average {
         }
         ans = ans / n;
         System.out.println(ans);
+        sc.close();
     }
 }

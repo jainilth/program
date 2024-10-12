@@ -57,5 +57,6 @@ public class Per {
         String s = sc.next();
         Stack stack = new Stack(s);
         stack.checkStringIsTrueOrNot();
+        sc.close();
     }
 }

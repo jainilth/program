@@ -29,7 +29,7 @@ public class Account {
 }
 
 class BankAccount {
-    static private double balance;
+    private double balance;
     int n;
     double a;
     int b;
