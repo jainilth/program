@@ -61,23 +61,12 @@ class LL2 {
             System.out.println("underflow");
             return 0;
         }
-        else if((countNode()-index)==1){
-            int ans2=first.link.info;
-            first.link=first.link.link;
-            return ans2;
-        }
-        else if((countNode()-index)==0){
-            int ans3=first.info;
-            first=first.link;
-            return ans3;
-        }
         else {
             Node temp = first;
             for (int i = 1; i < (countNode() - index); i++) {
                 temp = temp.link;
                 ans = temp.link.info;
             }
-            temp.link = temp.link.link;
         }
         return ans;
     }
