@@ -61,12 +61,23 @@ class LL2 {
             System.out.println("underflow");
             return 0;
         }
+        else if((countNode()-index)==1){
+            int ans2=first.link.info;
+            // first.link=first.link.link;
+            return ans2;
+        }
+        else if((countNode()-index)==0){
+            int ans3=first.info;
+            // first=first.link;
+            return ans3;
+        }
         else {
             Node temp = first;
             for (int i = 1; i < (countNode() - index); i++) {
                 temp = temp.link;
                 ans = temp.link.info;
             }
+            // temp.link = temp.link.link;
         }
         return ans;
     }
@@ -104,7 +115,7 @@ public class StackImplement {
         list.push(30);
         list.push(40);
         list.display();
-        System.out.println(list.peep(5));
+        System.out.println(list.peep(6));
         list.display();
         list.change(6, 50);
         list.display();
