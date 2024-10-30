@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        h1 {
+            color: black; /* Initial font color for heading */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading element -->
+    <h1 id="heading">Hover over me</h1>
+
+    <!-- Button for displaying date and time -->
+    <button id="dateButton">Date and Time</button>
+
+    <script>
+        // (i) Mouseover and Mouseout Events to change heading color
+        const heading = document.getElementById('heading');
+
+        // When mouse is over the heading, change the color to red
+        heading.addEventListener('mouseover', function() {
+            heading.style.color = 'red';
+        });
+
+        // When mouse leaves the heading, change the color back to black
+        heading.addEventListener('mouseout', function() {
+            heading.style.color = 'black';
+        });
+
+        // (ii) Keypress Event to check for vowels
+        document.addEventListener('keypress', function(event) {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            const keyPressed = event.key.toLowerCase(); // Convert to lowercase for uniformity
+
+            if (vowels.includes(keyPressed)) {
+                alert('Vowel is pressed');
+            }
+        });
+
+        // (iii) Button click event to show current date and time
+        const dateButton = document.getElementById('dateButton');
+
+        dateButton.addEventListener('click', function() {
+            const now = new Date();
+            alert('Current Date and Time: ' + now);
+        });
+    </script>
+
+</body>
+</html>
