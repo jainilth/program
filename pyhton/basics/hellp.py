@@ -1,5 +1,6 @@
 name=input("what's your name? ")
 print("hello,",name)
+print(f"hello, {name}")#you can also write like this
 
 a=True and False
 print(a)

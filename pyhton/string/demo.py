@@ -41,3 +41,5 @@ print("Count of 'world':", count_world)
 # 10. Format
 formatted_text = "Hello, {}! Welcome to {}.".format("Alice", "Python")
 print("Formatted text:", formatted_text)
+
+print(len(text))
