@@ -1,3 +1,4 @@
+d={}#empty dictionary
 a={
     "marks":99,
     "name":"jainil",
@@ -10,6 +11,7 @@ print(a.keys())
 print(a.values())
 print(a.get(0))
 print(a[0])#is not same as get method
+print(len(a))
 
 # Example dictionary
 my_dict = {"a": 1, "b": 2, "c": 3}
