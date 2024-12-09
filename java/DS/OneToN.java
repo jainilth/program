@@ -5,6 +5,7 @@ public class OneToN {
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
         increse(a);
+        sc.close();
     }
     public static void increse(int a){
         if(a==0){
