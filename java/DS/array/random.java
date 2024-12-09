@@ -18,5 +18,6 @@ public class random {
             b[i] = a[num];
             used[num] = true;
         }
+        sc.close();
     }
 }
