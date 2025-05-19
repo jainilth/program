@@ -9,6 +9,9 @@ public class store {
         }
         Map<Integer, Integer> mpp = new HashMap<>();
         for (int i = 0; i < n; i++) {
+            //put(key,value):-
+            //key-the element of array
+            //value-getorDefault()->return increment of index or if available otherwise set 0 of given element
             mpp.put(arr[i], mpp.getOrDefault(arr[i], 0) + 1);
         }
         System.out.println("-------------------------------");
