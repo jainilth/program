@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitkha - Fresh Fruits Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            background-color: #051922 !important;
+        }
+        .navbar-brand {
+            color: #F28123 !important;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: #F28123 !important;
+        }
+        .section-title {
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-weight: 700;
+        }
+        .section-title h2 span {
+            color: #F28123;
+        }
+        .product-card {
+            padding: 30px;
+            box-shadow: 0 0 20px #e4e4e4;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        .product-card:hover {
+            box-shadow: 0 0 40px #d4d4d4;
+        }
+        .product-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .product-image img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .product-name {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .product-unit {
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .cart-btn {
+            background-color: #F28123;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .cart-btn:hover {
+            background-color: #051922;
+        }
+        .cart-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-apple-alt me-2"></i>Fruitkha
+                <small class="d-block" style="font-size: 12px; margin-left: 30px; margin-top: -5px;">Fresh Fruits Online</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="nav-link me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2><span>Our</span> Products</h2>
+                <p class="w-75 mx-auto text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.
+                </p>
+            </div>
+
+            <div class="row mt-5">
+                <!-- Strawberry -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card text-center">
+                        <div class="product-image">
+                            <img src="https://themewagon.github.io/fruitkha/assets/img/products/product-img-1.jpg" alt="Strawberry">
+                        </div>
+                        <h3 class="product-name">Strawberry</h3>
+                        <p class="product-unit">Per Kg</p>
+                        <h4 class="product-price">85$</h4>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Berry (Grapes) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card text-center">
+                        <div class="product-image">
+                            <img src="https://themewagon.github.io/fruitkha/assets/img/products/product-img-2.jpg" alt="Lemon">
+                        </div>
+                        <h3 class="product-name">Berry</h3>
+                        <p class="product-unit">Per Kg</p>
+                        <h4 class="product-price">70$</h4>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Lemon -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card text-center">
+                        <div class="product-image">
+                            <img src="https://themewagon.github.io/fruitkha/assets/img/products/product-img-3.jpg" alt="Berry">
+                        </div>
+                        <h3 class="product-name">Lemon</h3>
+                        <p class="product-unit">Per Kg</p>
+                        <h4 class="product-price">35$</h4>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
