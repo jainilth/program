@@ -181,10 +181,11 @@ public class sortLL {
         l1.insertAtEnd(20);
         l1.insertAtEnd(80);
         l1.insertAtEnd(1);
-        // l1.sortList();
-        // l1.gcdNodeList();
         l1.display();
-        l1.swapKthNode(3);
+        l1.sortList();
+        l1.display();
+        // l1.gcdNodeList();
+        // l1.swapKthNode(3);
         // l1.swapUlternate();
     }
 }
